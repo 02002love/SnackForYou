@@ -396,7 +396,7 @@
                 <navigationController id="Ffe-iq-DQ9" customClass="CustomViewController" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" id="7qx-RX-by3"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="MWk-ZE-wSD">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="MWk-ZE-wSD">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -411,9 +411,9 @@
         <!--专题-->
         <scene sceneID="15P-d8-Nbw">
             <objects>
-                <tableViewController id="scd-sC-jD4" sceneMemberID="viewController">
+                <tableViewController id="scd-sC-jD4" customClass="SubjectController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="3YH-i7-ewk">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <collectionView key="tableHeaderView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="DWJ-ME-CV4">
@@ -438,11 +438,61 @@
                             </cells>
                         </collectionView>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="oWp-iS-BoS">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="subcell" rowHeight="200" id="oWp-iS-BoS" customClass="SubjectCell">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="oWp-iS-BoS" id="7JY-7J-orc">
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SJL-hv-eKf">
+                                            <rect key="frame" x="5" y="5" width="310" height="194"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="194" id="4BV-h5-1Hv"/>
+                                                <constraint firstAttribute="width" constant="310" id="S89-Ak-dua"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                    <integer key="value" value="10"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                            </userDefinedRuntimeAttributes>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KXN-OU-7wo">
+                                            <rect key="frame" x="5" y="178" width="310" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" weight="black" pointSize="17"/>
+                                            <color key="textColor" red="0.99828361740000005" green="0.99828361740000005" blue="0.99828361740000005" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="redraw" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pyd-oj-UdP">
+                                            <rect key="frame" x="262" y="8" width="50" height="45"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                            <inset key="titleEdgeInsets" minX="0.0" minY="31" maxX="10" maxY="0.0"/>
+                                            <inset key="imageEdgeInsets" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
+                                            <state key="normal" title="123" image="icon_heart_white~iphone.png">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="subjectBtnClick:" destination="oWp-iS-BoS" eventType="touchUpInside" id="Mjy-X5-hxS"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="SJL-hv-eKf" firstAttribute="leading" secondItem="7JY-7J-orc" secondAttribute="leading" constant="5" id="8BW-MX-lqg"/>
+                                        <constraint firstItem="SJL-hv-eKf" firstAttribute="top" relation="greaterThanOrEqual" secondItem="7JY-7J-orc" secondAttribute="top" constant="5" id="IZc-9t-WPj"/>
+                                        <constraint firstAttribute="bottom" secondItem="SJL-hv-eKf" secondAttribute="bottom" id="LVg-5b-4fl"/>
+                                        <constraint firstItem="SJL-hv-eKf" firstAttribute="top" secondItem="7JY-7J-orc" secondAttribute="top" constant="5" id="Rfm-eK-ZHj"/>
+                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="SJL-hv-eKf" secondAttribute="trailing" constant="5" id="Yq1-T8-tln"/>
+                                        <constraint firstItem="KXN-OU-7wo" firstAttribute="centerX" secondItem="SJL-hv-eKf" secondAttribute="centerX" id="YyZ-TR-5e2"/>
+                                        <constraint firstItem="KXN-OU-7wo" firstAttribute="leading" secondItem="7JY-7J-orc" secondAttribute="leading" constant="5" id="cYF-hg-a0D"/>
+                                        <constraint firstAttribute="trailing" secondItem="SJL-hv-eKf" secondAttribute="trailing" constant="5" id="qVD-Mk-sou"/>
+                                        <constraint firstAttribute="bottom" secondItem="KXN-OU-7wo" secondAttribute="bottom" id="ugb-wL-mAn"/>
+                                        <constraint firstAttribute="trailing" secondItem="KXN-OU-7wo" secondAttribute="trailing" constant="5" id="xhj-mt-n8e"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="descLabel" destination="KXN-OU-7wo" id="ZbP-Bz-SUm"/>
+                                    <outlet property="hotButton" destination="Pyd-oj-UdP" id="chb-aN-Lye"/>
+                                    <outlet property="iconImageView" destination="SJL-hv-eKf" id="znu-tB-DhM"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -481,5 +531,6 @@
         <image name="Icon_Heart_17x17~iphone.png" width="17" height="17"/>
         <image name="Icon_Set_17x17~iphone.png" width="17" height="17"/>
         <image name="Icon_Taobao_Car_17x17~iphone.png" width="17" height="17"/>
+        <image name="icon_heart_white~iphone.png" width="14" height="14"/>
     </resources>
 </document>
