@@ -416,17 +416,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <collectionView key="tableHeaderView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="DWJ-ME-CV4">
+                        <collectionView key="tableHeaderView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="jAr-Rb-JM2">
                             <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="FoL-GQ-VoY">
+                            <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="sFj-Na-SK5">
                                 <size key="itemSize" width="50" height="50"/>
                                 <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                 <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                 <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                             </collectionViewFlowLayout>
                             <cells>
-                                <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Clq-JD-bbZ">
+                                <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Jjz-9k-H7h">
                                     <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -462,14 +462,13 @@
                                             <color key="textColor" red="0.99828361740000005" green="0.99828361740000005" blue="0.99828361740000005" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <button opaque="NO" contentMode="redraw" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pyd-oj-UdP">
-                                            <rect key="frame" x="262" y="8" width="50" height="45"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                            <inset key="titleEdgeInsets" minX="0.0" minY="31" maxX="10" maxY="0.0"/>
-                                            <inset key="imageEdgeInsets" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
-                                            <state key="normal" title="123" image="icon_heart_white~iphone.png">
-                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                            </state>
+                                        <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="Pyd-oj-UdP">
+                                            <rect key="frame" x="270" y="8" width="50" height="45"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="50" id="bZk-ud-VKC"/>
+                                                <constraint firstAttribute="height" constant="45" id="pdb-RZ-aiX"/>
+                                            </constraints>
+                                            <state key="normal" title="123" image="icon_heart_white~iphone.png"/>
                                             <connections>
                                                 <action selector="subjectBtnClick:" destination="oWp-iS-BoS" eventType="touchUpInside" id="Mjy-X5-hxS"/>
                                             </connections>
@@ -480,9 +479,11 @@
                                         <constraint firstItem="SJL-hv-eKf" firstAttribute="top" relation="greaterThanOrEqual" secondItem="7JY-7J-orc" secondAttribute="top" constant="5" id="IZc-9t-WPj"/>
                                         <constraint firstAttribute="bottom" secondItem="SJL-hv-eKf" secondAttribute="bottom" id="LVg-5b-4fl"/>
                                         <constraint firstItem="SJL-hv-eKf" firstAttribute="top" secondItem="7JY-7J-orc" secondAttribute="top" constant="5" id="Rfm-eK-ZHj"/>
+                                        <constraint firstItem="Pyd-oj-UdP" firstAttribute="top" secondItem="7JY-7J-orc" secondAttribute="top" constant="8" id="WHT-km-IWl"/>
                                         <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="SJL-hv-eKf" secondAttribute="trailing" constant="5" id="Yq1-T8-tln"/>
                                         <constraint firstItem="KXN-OU-7wo" firstAttribute="centerX" secondItem="SJL-hv-eKf" secondAttribute="centerX" id="YyZ-TR-5e2"/>
                                         <constraint firstItem="KXN-OU-7wo" firstAttribute="leading" secondItem="7JY-7J-orc" secondAttribute="leading" constant="5" id="cYF-hg-a0D"/>
+                                        <constraint firstAttribute="trailing" secondItem="Pyd-oj-UdP" secondAttribute="trailing" id="gsx-vH-7zd"/>
                                         <constraint firstAttribute="trailing" secondItem="SJL-hv-eKf" secondAttribute="trailing" constant="5" id="qVD-Mk-sou"/>
                                         <constraint firstAttribute="bottom" secondItem="KXN-OU-7wo" secondAttribute="bottom" id="ugb-wL-mAn"/>
                                         <constraint firstAttribute="trailing" secondItem="KXN-OU-7wo" secondAttribute="trailing" constant="5" id="xhj-mt-n8e"/>

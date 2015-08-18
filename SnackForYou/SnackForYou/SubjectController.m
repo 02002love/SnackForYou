@@ -10,9 +10,10 @@
 //#import "SubjectModel.h"
 #import "SubjectCell.h"
 
-@interface SubjectController ()
+@interface SubjectController ()<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout>
 @property (nonatomic,strong)NSMutableArray * dataArray;
 @property (nonatomic,strong)AFHTTPRequestOperationManager * manager;
+@property (weak, nonatomic) IBOutlet UICollectionView *CollectionForScrollView;
 
 
 @end
@@ -34,6 +35,7 @@
     [super viewDidLoad];
     self.dataArray = [NSMutableArray array];
     [self loadData];
+    self.tableView.separatorStyle = 0;
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -49,9 +51,7 @@
         for (NSDictionary * dict1 in array) {
             SubjectModel * model = [SubjectModel subjectWithDict:dict1];
             
-            
             [self.dataArray addObject:model];
-            
         }
         [self.tableView reloadData];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
@@ -142,5 +142,25 @@
  // Pass the selected object to the new view controller.
  }
  */
+
+#pragma mark   ==colletion 的代理方法==
+
+-(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
+
+    UICollectionViewCell * cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"coll" forIndexPath:indexPath];
+
+    return cell;
+
+}
+
+-(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
+    
+    return 2000;
+
+}
+
+
+
+
 
 @end

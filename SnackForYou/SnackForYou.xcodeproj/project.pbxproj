@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E4FADB31B8302EC00169DDD /* libPushSDK-1.8.5.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E4FADB21B8302EC00169DDD /* libPushSDK-1.8.5.a */; };
+		4E4FADB51B83033C00169DDD /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E4FADB41B83033C00169DDD /* CFNetwork.framework */; };
+		4E4FADB91B83035100169DDD /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E4FADB81B83035100169DDD /* CoreTelephony.framework */; };
+		4E4FADBB1B83035C00169DDD /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E4FADBA1B83035C00169DDD /* SystemConfiguration.framework */; };
+		4E4FADC31B83038400169DDD /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E4FADC21B83038400169DDD /* Security.framework */; };
+		4E4FADC51B83038D00169DDD /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E4FADC41B83038C00169DDD /* libz.dylib */; };
+		4E4FADC71B830BA400169DDD /* PushConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4E4FADC61B830BA400169DDD /* PushConfig.plist */; };
 		4E96C94E1B7E245B00C1F6C9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E96C94D1B7E245B00C1F6C9 /* main.m */; };
 		4E96C9511B7E245B00C1F6C9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E96C9501B7E245B00C1F6C9 /* AppDelegate.m */; };
 		4E96C9541B7E245B00C1F6C9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E96C9531B7E245B00C1F6C9 /* ViewController.m */; };
@@ -358,6 +365,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4E4FADB11B8302EC00169DDD /* APService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APService.h; sourceTree = "<group>"; };
+		4E4FADB21B8302EC00169DDD /* libPushSDK-1.8.5.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libPushSDK-1.8.5.a"; sourceTree = "<group>"; };
+		4E4FADB41B83033C00169DDD /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		4E4FADB61B83034500169DDD /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		4E4FADB81B83035100169DDD /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		4E4FADBA1B83035C00169DDD /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		4E4FADBC1B83036400169DDD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		4E4FADBE1B83037300169DDD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		4E4FADC01B83037B00169DDD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		4E4FADC21B83038400169DDD /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		4E4FADC41B83038C00169DDD /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		4E4FADC61B830BA400169DDD /* PushConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = PushConfig.plist; sourceTree = "<group>"; };
 		4E96C9481B7E245B00C1F6C9 /* SnackForYou.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SnackForYou.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E96C94C1B7E245B00C1F6C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4E96C94D1B7E245B00C1F6C9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -737,6 +756,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E4FADC51B83038D00169DDD /* libz.dylib in Frameworks */,
+				4E4FADC31B83038400169DDD /* Security.framework in Frameworks */,
+				4E4FADBB1B83035C00169DDD /* SystemConfiguration.framework in Frameworks */,
+				4E4FADB91B83035100169DDD /* CoreTelephony.framework in Frameworks */,
+				4E4FADB51B83033C00169DDD /* CFNetwork.framework in Frameworks */,
+				4E4FADB31B8302EC00169DDD /* libPushSDK-1.8.5.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -750,9 +775,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4E4FADB01B8302EC00169DDD /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				4E4FADB11B8302EC00169DDD /* APService.h */,
+				4E4FADB21B8302EC00169DDD /* libPushSDK-1.8.5.a */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
 		4E96C93F1B7E245B00C1F6C9 = {
 			isa = PBXGroup;
 			children = (
+				4E4FADC41B83038C00169DDD /* libz.dylib */,
+				4E4FADC21B83038400169DDD /* Security.framework */,
+				4E4FADC01B83037B00169DDD /* UIKit.framework */,
+				4E4FADBE1B83037300169DDD /* Foundation.framework */,
+				4E4FADBC1B83036400169DDD /* CoreGraphics.framework */,
+				4E4FADBA1B83035C00169DDD /* SystemConfiguration.framework */,
+				4E4FADB81B83035100169DDD /* CoreTelephony.framework */,
+				4E4FADB61B83034500169DDD /* CoreFoundation.framework */,
+				4E4FADB41B83033C00169DDD /* CFNetwork.framework */,
 				4E96C94A1B7E245B00C1F6C9 /* SnackForYou */,
 				4E96C9641B7E245B00C1F6C9 /* SnackForYouTests */,
 				4E96C9491B7E245B00C1F6C9 /* Products */,
@@ -771,6 +814,7 @@
 		4E96C94A1B7E245B00C1F6C9 /* SnackForYou */ = {
 			isa = PBXGroup;
 			children = (
+				4E4FADB01B8302EC00169DDD /* lib */,
 				4ED3E6511B8208E5006EBA20 /* UIKit+AFNetworking */,
 				4ED3E63D1B81EE67006EBA20 /* MBProgressHUD */,
 				4ED3E6201B81E420006EBA20 /* AFNetworking */,
@@ -802,6 +846,7 @@
 		4E96C94B1B7E245B00C1F6C9 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				4E4FADC61B830BA400169DDD /* PushConfig.plist */,
 				4E96C9711B7E253300C1F6C9 /* Prefix.pch */,
 				4E96C94C1B7E245B00C1F6C9 /* Info.plist */,
 				4E96C94D1B7E245B00C1F6C9 /* main.m */,
@@ -1257,6 +1302,7 @@
 				TargetAttributes = {
 					4E96C9471B7E245B00C1F6C9 = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = 3BFN843GX2;
 					};
 					4E96C9601B7E245B00C1F6C9 = {
 						CreatedOnToolsVersion = 6.4;
@@ -1422,6 +1468,7 @@
 				4E96CAAE1B7E26B000C1F6C9 /* bg_details~iphone.png in Resources */,
 				4E96CB821B7E26B000C1F6C9 /* Icon_Heart_17x17~iphone.png in Resources */,
 				4E96CAF01B7E26B000C1F6C9 /* Btn_HeaderDropdown_Pressed_11x12~iphone.png in Resources */,
+				4E4FADC71B830BA400169DDD /* PushConfig.plist in Resources */,
 				4E96CB0E1B7E26B000C1F6C9 /* Btn_NaviBar_Mine_20x20~iphone@3x.png in Resources */,
 				4E96CAE01B7E26B000C1F6C9 /* Btn_Collection_Selected_17x17~iphone.png in Resources */,
 				4E96CACD1B7E26B000C1F6C9 /* bg_red~iphone@3x.png in Resources */,
@@ -1768,9 +1815,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PREFIX_HEADER = "$(SRCROOT)/SnackForYou/Prefix.pch";
 				INFOPLIST_FILE = SnackForYou/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/SnackForYou/lib",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -1780,9 +1832,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PREFIX_HEADER = "$(SRCROOT)/SnackForYou/Prefix.pch";
 				INFOPLIST_FILE = SnackForYou/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/SnackForYou/lib",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
