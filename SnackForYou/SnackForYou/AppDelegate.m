@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "APService.h"
+//#import "APService.h"
 @interface AppDelegate ()
 
 @end
@@ -19,6 +19,9 @@
     // Override point for customization after application launch.
     [application setStatusBarHidden:NO];
     
+    
+    
+    //极光推送
     if ([UIDevice currentDevice].systemVersion.floatValue>=8.0) {
         [APService registerForRemoteNotificationTypes:(UIUserNotificationTypeBadge | UIUserNotificationTypeSound |
                                                        UIUserNotificationTypeAlert) categories:nil];
@@ -32,36 +35,89 @@
     
     [APService setupWithOption:launchOptions];
     
+    //shareSDK
+    
+    [ShareSDK registerApp:@"9c02dff0a8a1"];
+    
+    
+    
+    /**
+     连接新浪微博开放平台应用以使用相关功能，此应用需要引用SinaWeiboConnection.framework
+     http://open.weibo.com上注册新浪微博开放平台应用，并将相关信息填写到以下字段
+     **/
+    [ShareSDK connectSinaWeiboWithAppKey:@"568898243"
+                               appSecret:@"38a4f8204cc784f81f9f0daaf31e02e3"
+                             redirectUri:@"http://www.sharesdk.cn"
+                             weiboSDKCls:[WeiboSDK class]];
+    /**
+     连接QQ空间应用以使用相关功能，此应用需要引用QZoneConnection.framework
+     http://connect.qq.com/intro/login/上申请加入QQ登录，并将相关信息填写到以下字段
+     
+     如果需要实现SSO，需要导入TencentOpenAPI.framework,并引入QQApiInterface.h和TencentOAuth.h，将QQApiInterface和TencentOAuth的类型传入接口
+     **/
+    [ShareSDK connectQZoneWithAppKey:@"100371282"
+                           appSecret:@"aed9b0303e3ed1e27bae87c33761161d"
+                   qqApiInterfaceCls:[QQApiInterface class]
+                     tencentOAuthCls:[TencentOAuth class]];
+    
+    /**
+     连接微信应用以使用相关功能，此应用需要引用WeChatConnection.framework和微信官方SDK
+     http://open.weixin.qq.com上注册应用，并将相关信息填写以下字段
+     **/
+    [ShareSDK connectWeChatWithAppId:@"wx4868b35061f87885"
+                           appSecret:@"64020361b8ec4c99936c0e3999a9f249"
+                           wechatCls:[WXApi class]];
+    
+    
     return YES;
 }
 
 
-//获取 token
+- (BOOL)application:(UIApplication *)application
+      handleOpenURL:(NSURL *)url
+{
+    return [ShareSDK handleOpenURL:url
+                        wxDelegate:self];
+}
+
+- (BOOL)application:(UIApplication *)application
+            openURL:(NSURL *)url
+  sourceApplication:(NSString *)sourceApplication
+         annotation:(id)annotation
+{
+    return [ShareSDK handleOpenURL:url
+                 sourceApplication:sourceApplication
+                        annotation:annotation
+                        wxDelegate:self];
+}
+
+
+//极光推送获取 token
 
 -(void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken{
-
+    
     [APService registerDeviceToken:deviceToken];
-
-
-
+    
+    
+    
 }
 
 -(void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler{
-
+    
     SKLog(@"可以的拿到通知~~");
-     [APService handleRemoteNotification:userInfo];
+    [APService handleRemoteNotification:userInfo];
     if ([UIDevice currentDevice].systemVersion.floatValue<8.0) {
-         completionHandler(UIBackgroundFetchResultNewData);
+        completionHandler(UIBackgroundFetchResultNewData);
         
     }
-
-
-
+    
+    
+    
 }
 
 //- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
-//    
-//    
+//
+//
 //    // IOS 7 Support Required
 //    [APService handleRemoteNotification:userInfo];
 //    completionHandler(UIBackgroundFetchResultNewData);
