@@ -15,6 +15,7 @@
     if (self = [super init]) {
         self.subID = dict[@"id"];
         self.img_url = dict[@"thumb_img"][@"img_url"];
+//        self.info = dict[@"action"][];
         [self setValuesForKeysWithDictionary:dict];
         
     }

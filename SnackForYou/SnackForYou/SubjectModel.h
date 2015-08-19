@@ -9,11 +9,14 @@
 #import <Foundation/Foundation.h>
 
 @interface SubjectModel : NSObject
-@property (nonatomic,strong)NSNumber * subID;
-@property (nonatomic,copy)NSString * desc;
-@property (nonatomic,strong)NSNumber * hotindex;
-@property (nonatomic,strong)NSNumber * shareindex;
-@property (nonatomic,copy)NSString * img_url;
+@property (nonatomic,strong)NSNumber * subID;//头视图 和 体视图 共有
+@property (nonatomic,copy)NSString * desc;//体视图
+@property (nonatomic,strong)NSNumber * hotindex;//体视图
+@property (nonatomic,strong)NSNumber * shareindex;//体视图
+@property (nonatomic,copy)NSString * img_url; //头视图 和 体视图 共有
+
+//@property (nonatomic,strong)NSString * info;//头视图
+
 
 
 +(instancetype)subjectWithDict:(NSDictionary *)dict;

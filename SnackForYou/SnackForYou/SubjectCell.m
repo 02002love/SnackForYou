@@ -39,7 +39,7 @@
 
     [self.iconImageView setImageWithURL:[NSURL URLWithString:model.img_url]];
     self.descLabel.text = model.desc ;
-    [self.hotButton setTitle:[model.hotindex stringValue]  forState:UIControlStateNormal];
+    [self.hotButton setTitle:nil  forState:UIControlStateNormal];
 
 }
 

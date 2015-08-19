@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E3F31711B8333D3002739EC /* SubjectCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E3F31701B8333D3002739EC /* SubjectCollectionCell.m */; };
 		4E4FADB31B8302EC00169DDD /* libPushSDK-1.8.5.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E4FADB21B8302EC00169DDD /* libPushSDK-1.8.5.a */; };
 		4E4FADB51B83033C00169DDD /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E4FADB41B83033C00169DDD /* CFNetwork.framework */; };
 		4E4FADB91B83035100169DDD /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E4FADB81B83035100169DDD /* CoreTelephony.framework */; };
@@ -19,7 +20,6 @@
 		4E96C9541B7E245B00C1F6C9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E96C9531B7E245B00C1F6C9 /* ViewController.m */; };
 		4E96C9571B7E245B00C1F6C9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E96C9551B7E245B00C1F6C9 /* Main.storyboard */; };
 		4E96C9591B7E245B00C1F6C9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E96C9581B7E245B00C1F6C9 /* Images.xcassets */; };
-		4E96C95C1B7E245B00C1F6C9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E96C95A1B7E245B00C1F6C9 /* LaunchScreen.xib */; };
 		4E96C9681B7E245B00C1F6C9 /* SnackForYouTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E96C9671B7E245B00C1F6C9 /* SnackForYouTests.m */; };
 		4E96CAA21B7E26B000C1F6C9 /* bg_app_1242x2208~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E96C9731B7E26B000C1F6C9 /* bg_app_1242x2208~iphone.png */; };
 		4E96CAA31B7E26B000C1F6C9 /* bg_app_1242x2208~iphone@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E96C9741B7E26B000C1F6C9 /* bg_app_1242x2208~iphone@3x.png */; };
@@ -365,6 +365,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4E3F316F1B8333D3002739EC /* SubjectCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubjectCollectionCell.h; sourceTree = "<group>"; };
+		4E3F31701B8333D3002739EC /* SubjectCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubjectCollectionCell.m; sourceTree = "<group>"; };
 		4E4FADB11B8302EC00169DDD /* APService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APService.h; sourceTree = "<group>"; };
 		4E4FADB21B8302EC00169DDD /* libPushSDK-1.8.5.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libPushSDK-1.8.5.a"; sourceTree = "<group>"; };
 		4E4FADB41B83033C00169DDD /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -386,7 +388,6 @@
 		4E96C9531B7E245B00C1F6C9 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		4E96C9561B7E245B00C1F6C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4E96C9581B7E245B00C1F6C9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		4E96C95B1B7E245B00C1F6C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		4E96C9611B7E245B00C1F6C9 /* SnackForYouTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SnackForYouTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E96C9661B7E245B00C1F6C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4E96C9671B7E245B00C1F6C9 /* SnackForYouTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SnackForYouTests.m; sourceTree = "<group>"; };
@@ -775,6 +776,43 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4E3F316C1B831F16002739EC /* Subject */ = {
+			isa = PBXGroup;
+			children = (
+				4ED3E61D1B81DBFD006EBA20 /* SubjectController.h */,
+				4ED3E61E1B81DBFD006EBA20 /* SubjectController.m */,
+				4ED3E64C1B81FE2E006EBA20 /* SubjectCell.h */,
+				4ED3E64D1B81FE2E006EBA20 /* SubjectCell.m */,
+				4E3F316F1B8333D3002739EC /* SubjectCollectionCell.h */,
+				4E3F31701B8333D3002739EC /* SubjectCollectionCell.m */,
+				4ED3E6461B81F95C006EBA20 /* SubjectModel.h */,
+				4ED3E6471B81F95C006EBA20 /* SubjectModel.m */,
+			);
+			name = Subject;
+			sourceTree = "<group>";
+		};
+		4E3F316D1B831F39002739EC /* Mine */ = {
+			isa = PBXGroup;
+			children = (
+				4ED3E6151B81CAF3006EBA20 /* AboutUsController.h */,
+				4ED3E6161B81CAF3006EBA20 /* AboutUsController.m */,
+			);
+			name = Mine;
+			sourceTree = "<group>";
+		};
+		4E3F316E1B831F60002739EC /* main */ = {
+			isa = PBXGroup;
+			children = (
+				4E96C94F1B7E245B00C1F6C9 /* AppDelegate.h */,
+				4E96C9501B7E245B00C1F6C9 /* AppDelegate.m */,
+				4ED3E60E1B81B6A8006EBA20 /* CustomViewController.h */,
+				4ED3E60F1B81B6A8006EBA20 /* CustomViewController.m */,
+				4ED3E6181B81CFEF006EBA20 /* CustomTabbarController.h */,
+				4ED3E6191B81CFEF006EBA20 /* CustomTabbarController.m */,
+			);
+			name = main;
+			sourceTree = "<group>";
+		};
 		4E4FADB01B8302EC00169DDD /* lib */ = {
 			isa = PBXGroup;
 			children = (
@@ -819,25 +857,13 @@
 				4ED3E63D1B81EE67006EBA20 /* MBProgressHUD */,
 				4ED3E6201B81E420006EBA20 /* AFNetworking */,
 				4E96C9721B7E26B000C1F6C9 /* pic */,
-				4E96C94F1B7E245B00C1F6C9 /* AppDelegate.h */,
-				4E96C9501B7E245B00C1F6C9 /* AppDelegate.m */,
 				4E96C9521B7E245B00C1F6C9 /* ViewController.h */,
 				4E96C9531B7E245B00C1F6C9 /* ViewController.m */,
-				4ED3E60E1B81B6A8006EBA20 /* CustomViewController.h */,
-				4ED3E60F1B81B6A8006EBA20 /* CustomViewController.m */,
-				4ED3E6151B81CAF3006EBA20 /* AboutUsController.h */,
-				4ED3E6161B81CAF3006EBA20 /* AboutUsController.m */,
-				4ED3E6181B81CFEF006EBA20 /* CustomTabbarController.h */,
-				4ED3E6191B81CFEF006EBA20 /* CustomTabbarController.m */,
-				4ED3E61D1B81DBFD006EBA20 /* SubjectController.h */,
-				4ED3E61E1B81DBFD006EBA20 /* SubjectController.m */,
-				4ED3E64C1B81FE2E006EBA20 /* SubjectCell.h */,
-				4ED3E64D1B81FE2E006EBA20 /* SubjectCell.m */,
-				4ED3E6461B81F95C006EBA20 /* SubjectModel.h */,
-				4ED3E6471B81F95C006EBA20 /* SubjectModel.m */,
+				4E3F316E1B831F60002739EC /* main */,
+				4E3F316D1B831F39002739EC /* Mine */,
+				4E3F316C1B831F16002739EC /* Subject */,
 				4E96C9551B7E245B00C1F6C9 /* Main.storyboard */,
 				4E96C9581B7E245B00C1F6C9 /* Images.xcassets */,
-				4E96C95A1B7E245B00C1F6C9 /* LaunchScreen.xib */,
 				4E96C94B1B7E245B00C1F6C9 /* Supporting Files */,
 			);
 			path = SnackForYou;
@@ -1430,7 +1456,6 @@
 				4E96CB831B7E26B000C1F6C9 /* Icon_Heart_17x17~iphone@2x.png in Resources */,
 				4E96CB3F1B7E26B000C1F6C9 /* default_class_activity_210x105~iphone.png in Resources */,
 				4E96CAD31B7E26B000C1F6C9 /* bg_title~iphone@3x.png in Resources */,
-				4E96C95C1B7E245B00C1F6C9 /* LaunchScreen.xib in Resources */,
 				4E96CB881B7E26B000C1F6C9 /* icon_logo_35x35~iphone@3x.png in Resources */,
 				4E96CB411B7E26B000C1F6C9 /* default_class_activity_210x105~iphone@3x.png in Resources */,
 				4E96CB711B7E26B000C1F6C9 /* icon_cat_down_loading2_36x36~iphone@3x.png in Resources */,
@@ -1687,6 +1712,7 @@
 				4ED3E61F1B81DBFD006EBA20 /* SubjectController.m in Sources */,
 				4ED3E66A1B8208E5006EBA20 /* UIWebView+AFNetworking.m in Sources */,
 				4ED3E6371B81E420006EBA20 /* AFNetworkReachabilityManager.m in Sources */,
+				4E3F31711B8333D3002739EC /* SubjectCollectionCell.m in Sources */,
 				4ED3E6351B81E420006EBA20 /* AFHTTPRequestOperationManager.m in Sources */,
 				4ED3E6651B8208E5006EBA20 /* UIAlertView+AFNetworking.m in Sources */,
 			);
@@ -1717,14 +1743,6 @@
 				4E96C9561B7E245B00C1F6C9 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		4E96C95A1B7E245B00C1F6C9 /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4E96C95B1B7E245B00C1F6C9 /* Base */,
-			);
-			name = LaunchScreen.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

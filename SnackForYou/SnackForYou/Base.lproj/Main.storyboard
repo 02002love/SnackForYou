@@ -416,26 +416,45 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <collectionView key="tableHeaderView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="jAr-Rb-JM2">
-                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <collectionView key="tableHeaderView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" id="jAr-Rb-JM2">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="sFj-Na-SK5">
-                                <size key="itemSize" width="50" height="50"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="sFj-Na-SK5">
+                                <size key="itemSize" width="375" height="200"/>
                                 <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                 <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                 <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                             </collectionViewFlowLayout>
                             <cells>
-                                <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Jjz-9k-H7h">
+                                <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="coll" id="2Db-9h-tK9" customClass="SubjectCollectionCell">
                                     <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                    <autoresizingMask key="autoresizingMask"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
                                         <autoresizingMask key="autoresizingMask"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ML9-hm-UcK">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                                            </imageView>
+                                        </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </view>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="ML9-hm-UcK" secondAttribute="trailing" id="3WH-H4-4Hr"/>
+                                        <constraint firstItem="ML9-hm-UcK" firstAttribute="top" secondItem="2Db-9h-tK9" secondAttribute="top" id="G0P-Ck-F6x"/>
+                                        <constraint firstAttribute="bottom" secondItem="ML9-hm-UcK" secondAttribute="bottom" id="UfZ-1b-tJf"/>
+                                        <constraint firstItem="ML9-hm-UcK" firstAttribute="leading" secondItem="2Db-9h-tK9" secondAttribute="leading" id="tMq-uX-bxh"/>
+                                    </constraints>
+                                    <connections>
+                                        <outlet property="iconImage" destination="ML9-hm-UcK" id="Z17-YT-cV9"/>
+                                    </connections>
                                 </collectionViewCell>
                             </cells>
+                            <connections>
+                                <outlet property="dataSource" destination="scd-sC-jD4" id="bij-vR-fck"/>
+                                <outlet property="delegate" destination="scd-sC-jD4" id="IMF-st-OPX"/>
+                            </connections>
                         </collectionView>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="subcell" rowHeight="200" id="oWp-iS-BoS" customClass="SubjectCell">
@@ -468,7 +487,7 @@
                                                 <constraint firstAttribute="width" constant="50" id="bZk-ud-VKC"/>
                                                 <constraint firstAttribute="height" constant="45" id="pdb-RZ-aiX"/>
                                             </constraints>
-                                            <state key="normal" title="123" image="icon_heart_white~iphone.png"/>
+                                            <state key="normal" image="icon_heart_white~iphone.png"/>
                                             <connections>
                                                 <action selector="subjectBtnClick:" destination="oWp-iS-BoS" eventType="touchUpInside" id="Mjy-X5-hxS"/>
                                             </connections>
@@ -503,6 +522,9 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="专题" id="6fb-58-DCV"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="CollectionForScrollView" destination="jAr-Rb-JM2" id="LwH-ai-4WV"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9hi-y3-km3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
